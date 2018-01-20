@@ -3,14 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "google-maps-react": "1.1.2",
+    "keykey": "2.1.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-scripts": "1.1.0"
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.1.0",
+    "redux": "3.7.2",
+    "redux-devtools-extension": "2.13.2",
+    "redux-thunk": "2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint . --fix",
+    "prettier": "npm run prettier:js && npm run prettier:css",
+    "prettier:css": "prettier --write 'src/**/*.css'",
+    "prettier:js": "prettier '{bin,server,src}/**/*.js' --write --single-quote --tab-width 4 --bracket-spacing --trailing-comma es5",
+    "precommit": "npm run prettier && CI=true npm run test && npm run lint",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "eslint": "4.15.0",
+    "eslint-config-react-app": "2.1.0",
+    "prettier": "1.10.2"
   }
 }
