@@ -1,5 +1,14 @@
 import React from 'react';
+import { compose, lifecycle } from 'recompose';
 
 const List = () => <div>List page</div>;
 
-export default List;
+const enhance = compose(
+    lifecycle({
+        componentDidMount() {
+            this.props.getList();
+        },
+    })
+);
+
+export default enhance(List);
