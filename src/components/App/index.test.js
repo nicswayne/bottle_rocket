@@ -1,9 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './';
+import { shallow, render } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import configureMockStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
-    ReactDOM.unmountComponentAtNode(div);
+import App from '.';
+
+const mockStore = configureMockStore([thunk]);
+
+it('renders without crashing.', () => {
+    shallow(<App />);
+});
+
+it('matches snapshot', () => {
+    const store = mockStore({});
+
+    const wrapper = render(
+        <Provider store={store}>
+            <MemoryRouter>
+                <App />
+            </MemoryRouter>
+        </Provider>
+    );
+
+    expect(wrapper).toMatchSnapshot();
 });
