@@ -13,7 +13,7 @@ export const getList = () => dispatch => {
         (error, res, body) => {
             if (error) dispatch(getAllRestaurants.error(error));
 
-            dispatch(getAllRestaurants.success(body.restaurants));
+            dispatch(getAllRestaurants.success(JSON.parse(body).restaurants));
         }
     );
 };
