@@ -1,6 +1,7 @@
 {
     "restaurants" : [
 	{
+        "id": "0001",
 	    "name": "Hopdoddy Burger Bar",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png",
 	    "category" : "Burgers",
@@ -27,6 +28,7 @@
             }
 	},
 	{
+        "id": "0002",
 	    "name": "Pappadeaux Seafood Kitchen",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/pappadeaux.png",
 	    "category": "Seafood",
@@ -53,6 +55,7 @@
             }
 	},
 	{
+        "id": "0003",
 	    "name": "Yard House",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/yardhouse.png",
 	    "category": "Tap House",
@@ -81,6 +84,7 @@
             }
 	},
 	{
+        "id": "0004",
 	    "name": "Pluckers Wing Bar",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/pluckers.png",
 	    "category": "Wing Joint",
@@ -101,6 +105,7 @@
             }
 	},
 	{
+        "id": "0005",
 	    "name": "Ramen Hakata",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/ramen_hakata.png",
 	    "category": "Japanese",
@@ -127,6 +132,7 @@
             }
 	},
 	{
+        "id": "0006",
 	    "name": "Gloria's",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/glorias.png",
 	    "category": "Mexican",
@@ -155,6 +161,7 @@
             }
 	},
 	{
+        "id": "0007",
 	    "name": "The Social House",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/social_house.png",
 	    "category": "Bar and Grill",
@@ -179,6 +186,7 @@
             }
 	},
 	{
+        "id": "0008",
 	    "name": "Chuy's",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/chuys.png",
 	    "category": "Tex Mex",
@@ -200,6 +208,7 @@
             }
 	},
 	{
+        "id": "0009",
 	    "name": "Flying Saucer Draught Emporium",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/flying_saucer.png",
 	    "category": "Tap House",
@@ -225,6 +234,7 @@
             }
 	},
 	{
+        "id": "0010",
 	    "name": "Whole Foods Market",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/whole_foods.png",
 	    "category": "Prepared Eats",
@@ -251,6 +261,7 @@
             }
 	},
 	{
+        "id": "0011",
 	    "name": "The Londoner",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/the_londoner.png",
 	    "category": "Pub",
@@ -276,6 +287,7 @@
             }
 	},
 	{
+        "id": "0012",
 	    "name": "The Original Pancake House",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/original_pancake_house.png",
 	    "category": "Coffee and Breakfast",
@@ -301,6 +313,7 @@
             }
 	},
 	{
+        "id": "0013",
 	    "name": "Thai Star",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/thai_star.png",
 	    "category": "Thai",
@@ -326,6 +339,7 @@
             }
 	},
 	{
+        "id": "0014",
 	    "name": "In-N-Out Burger",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/in_n_out_burger.png",
 	    "category": "Fast Food Burgers",
@@ -352,6 +366,7 @@
             }
 	},
 	{
+        "id": "0015",
 	    "name": "Buffalo Wild Wings",
 	    "backgroundImageURL": "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/buffalo_wild_wings.png",
 	    "category": "Wing Joint",
