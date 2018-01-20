@@ -1,7 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List component should match snapshot. 1`] = `
-<div>
-  List page
+<div
+  class=""
+>
+  <div>
+    Header
+  </div>
+  <div>
+    Body
+    <div>
+      Item
+    </div>
+  </div>
+  <div
+    class="footer"
+  >
+    <button
+      class="button"
+      type="button"
+    >
+      <img
+        alt=""
+        src="tab_lunch@2x.png"
+      >
+        
+      </img>
+      <div>
+        lunch
+      </div>
+    </button>
+    <button
+      class="button"
+      type="button"
+    >
+      <img
+        alt=""
+        src="tab_internets@2x.png"
+      >
+        
+      </img>
+      <div>
+        internets
+      </div>
+    </button>
+  </div>
 </div>
 `;
