@@ -432,6 +432,21 @@ button {
   padding-top: 26px;
 }
 
+/************* WEB **************/
+
+.web-body {
+  position: absolute;
+  bottom: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.web-body iframe {
+  height: 100%;
+  width: 100%;
+}
+
 /************* FOOTER *************/
 
 .footer {
