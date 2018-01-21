@@ -371,18 +371,44 @@ button {
   width: 100%;
 }
 
-.name {
+.item .name {
   position: relative;
   padding-top: 135px;
-  font-size: 16px;
-  padding-left: 12px;
   z-index: 2;
 }
 
-.category {
+.item .category {
   padding-bottom: 6px;
+}
+
+.name {
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.category {
   padding-top: 6px;
   font-size: 12px;
+}
+
+/************* DETAILS ************/
+
+.details-header {
+  background-color: #34b379;
+  height: 60px;
+}
+
+.details-header .name {
+  position: relative;
+  top: 13px;
+}
+
+.pad-16 {
+  padding-top: 16px;
+}
+
+.pad-26 {
+  padding-top: 26px;
 }
 
 /************* FOOTER *************/

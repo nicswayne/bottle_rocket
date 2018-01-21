@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsModal component should match snapshot. 1`] = `
+<div>
+  <div
+    class="loc-map"
+  >
+    <div
+      class="map-content"
+    >
+      <div
+        style="position:relative;width:100%;height:180px"
+      >
+        <div
+          style="position:absolute;left:0;right:0;bottom:0;top:0;display:inherit"
+        >
+          Loading map...
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="details-header"
+  >
+    <div
+      class="name text"
+    >
+      <strong>
+        NAME
+      </strong>
+      <div
+        class="category"
+      >
+        CATEGORY
+      </div>
+    </div>
+  </div>
+  <div
+    class="details"
+  >
+    <div
+      class="name pad-16"
+    >
+      Address
+    </div>
+    <div
+      class="name pad-26"
+    >
+      phone
+    </div>
+    <div
+      class="name pad-26"
+    >
+      twitter
+    </div>
+  </div>
+</div>
+`;
