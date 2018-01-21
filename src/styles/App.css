@@ -329,7 +329,6 @@ button {
 .header .text {
   font-size: 17px;
   line-height: 90px;
-  padding-left: 10%;
 }
 
 .header .map {
@@ -355,7 +354,8 @@ button {
   height: 180px;
 }
 
-.item:hover {
+.item:hover,
+.button:hover {
   cursor: pointer;
 }
 
@@ -392,6 +392,14 @@ button {
 }
 
 /************* DETAILS ************/
+
+.header .button {
+  height: 70px;
+  width: 70px;
+  padding-left: 12px;
+  padding-top: 17px;
+  float: left;
+}
 
 .details-header {
   background-color: #34b379;

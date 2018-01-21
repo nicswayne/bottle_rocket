@@ -26,22 +26,21 @@ exports[`DetailsModal component should match snapshot. 1`] = `
       class="name text"
     >
       <strong>
-        NAME
+        name
       </strong>
       <div
         class="category"
       >
-        CATEGORY
+        category
       </div>
     </div>
   </div>
-  <div
-    class="details"
-  >
+  <div>
     <div
       class="name pad-16"
     >
-      Address
+      address
+      city, ST 12345
     </div>
     <div
       class="name pad-26"
