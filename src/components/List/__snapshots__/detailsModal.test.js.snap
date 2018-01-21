@@ -50,7 +50,7 @@ exports[`DetailsModal component should match snapshot. 1`] = `
     <div
       class="name pad-26"
     >
-      twitter
+      @twitter
     </div>
   </div>
 </div>
