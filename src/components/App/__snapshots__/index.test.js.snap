@@ -3,8 +3,23 @@
 exports[`matches snapshot 1`] = `
 <div>
   <div>
-    <div>
-      Header
+    <div
+      class="header"
+    >
+      <div
+        class="text"
+      >
+        <strong>
+          Lunch Tyme
+        </strong>
+        <img
+          alt=""
+          class="map"
+          src="icon_map@2x.png"
+        >
+          
+        </img>
+      </div>
     </div>
     <div
       class="list-body"
@@ -28,7 +43,7 @@ exports[`matches snapshot 1`] = `
         </img>
         <div>
           <div
-            class="name"
+            class="name text"
           >
             <strong>
               Restaurant Name
@@ -55,7 +70,9 @@ exports[`matches snapshot 1`] = `
         >
           
         </img>
-        <div>
+        <div
+          class="text"
+        >
           lunch
         </div>
       </button>
@@ -69,7 +86,9 @@ exports[`matches snapshot 1`] = `
         >
           
         </img>
-        <div>
+        <div
+          class="text"
+        >
           internets
         </div>
       </button>

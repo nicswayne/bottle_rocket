@@ -2,8 +2,23 @@
 
 exports[`List component should match snapshot. 1`] = `
 <div>
-  <div>
-    Header
+  <div
+    class="header"
+  >
+    <div
+      class="text"
+    >
+      <strong>
+        Lunch Tyme
+      </strong>
+      <img
+        alt=""
+        class="map"
+        src="icon_map@2x.png"
+      >
+        
+      </img>
+    </div>
   </div>
   <div
     class="list-body"
@@ -27,7 +42,7 @@ exports[`List component should match snapshot. 1`] = `
       </img>
       <div>
         <div
-          class="name"
+          class="name text"
         >
           <strong>
             Restaurant Name
@@ -54,7 +69,9 @@ exports[`List component should match snapshot. 1`] = `
       >
         
       </img>
-      <div>
+      <div
+        class="text"
+      >
         lunch
       </div>
     </button>
@@ -68,7 +85,9 @@ exports[`List component should match snapshot. 1`] = `
       >
         
       </img>
-      <div>
+      <div
+        class="text"
+      >
         internets
       </div>
     </button>
