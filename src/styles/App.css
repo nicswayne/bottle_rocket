@@ -329,7 +329,6 @@ button {
 .header .text {
   font-size: 17px;
   line-height: 90px;
-  padding-left: 10%;
 }
 
 .header .map {
@@ -355,7 +354,8 @@ button {
   height: 180px;
 }
 
-.item:hover {
+.item:hover,
+.button:hover {
   cursor: pointer;
 }
 
@@ -371,18 +371,52 @@ button {
   width: 100%;
 }
 
-.name {
+.item .name {
   position: relative;
   padding-top: 135px;
-  font-size: 16px;
-  padding-left: 12px;
   z-index: 2;
 }
 
-.category {
+.item .category {
   padding-bottom: 6px;
+}
+
+.name {
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.category {
   padding-top: 6px;
   font-size: 12px;
+}
+
+/************* DETAILS ************/
+
+.header .button {
+  height: 70px;
+  width: 70px;
+  padding-left: 12px;
+  padding-top: 17px;
+  float: left;
+}
+
+.details-header {
+  background-color: #34b379;
+  height: 60px;
+}
+
+.details-header .name {
+  position: relative;
+  top: 13px;
+}
+
+.pad-16 {
+  padding-top: 16px;
+}
+
+.pad-26 {
+  padding-top: 26px;
 }
 
 /************* FOOTER *************/
