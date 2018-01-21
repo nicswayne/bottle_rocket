@@ -2,6 +2,95 @@
 
 exports[`List component should match snapshot. 1`] = `
 <div>
-  List page
+  <div
+    class="header"
+  >
+    <div
+      class="text"
+    >
+      <strong>
+        Lunch Tyme
+      </strong>
+      <img
+        alt=""
+        class="map"
+        src="icon_map@2x.png"
+      >
+        
+      </img>
+    </div>
+  </div>
+  <div
+    class="list-body"
+  >
+    <div
+      class="item"
+    >
+      <img
+        alt=""
+        class="background-img"
+        src="http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png"
+      >
+        
+      </img>
+      <img
+        alt=""
+        class="top-img"
+        src="cellGradientBackground@2x.png"
+      >
+        
+      </img>
+      <div>
+        <div
+          class="name text"
+        >
+          <strong>
+            Restaurant Name
+          </strong>
+          <div
+            class="category"
+          >
+            Category Type
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="footer"
+  >
+    <button
+      class="button"
+      type="button"
+    >
+      <img
+        alt=""
+        src="tab_lunch@2x.png"
+      >
+        
+      </img>
+      <div
+        class="text"
+      >
+        lunch
+      </div>
+    </button>
+    <button
+      class="button"
+      type="button"
+    >
+      <img
+        alt=""
+        src="tab_internets@2x.png"
+      >
+        
+      </img>
+      <div
+        class="text"
+      >
+        internets
+      </div>
+    </button>
+  </div>
 </div>
 `;
