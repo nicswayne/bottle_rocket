@@ -355,6 +355,10 @@ button {
   height: 180px;
 }
 
+.item:hover {
+  cursor: pointer;
+}
+
 .item .background-img {
   position: absolute;
   z-index: 0;
@@ -403,6 +407,7 @@ button {
 
 .footer .button {
   width: 50%;
+  text-align: center;
 }
 
 .button img {

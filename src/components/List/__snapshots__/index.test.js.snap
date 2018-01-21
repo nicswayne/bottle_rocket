@@ -23,45 +23,14 @@ exports[`List component should match snapshot. 1`] = `
   <div
     class="list-body"
   >
-    <div
-      class="item"
-    >
-      <img
-        alt=""
-        class="background-img"
-        src="http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png"
-      >
-        
-      </img>
-      <img
-        alt=""
-        class="top-img"
-        src="cellGradientBackground@2x.png"
-      >
-        
-      </img>
-      <div>
-        <div
-          class="name text"
-        >
-          <strong>
-            Restaurant Name
-          </strong>
-          <div
-            class="category"
-          >
-            Category Type
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
   <div
     class="footer"
   >
-    <button
+    <a
       class="button"
-      type="button"
+      href="/"
     >
       <img
         alt=""
@@ -74,10 +43,10 @@ exports[`List component should match snapshot. 1`] = `
       >
         lunch
       </div>
-    </button>
-    <button
+    </a>
+    <a
       class="button"
-      type="button"
+      href="/web"
     >
       <img
         alt=""
@@ -90,7 +59,7 @@ exports[`List component should match snapshot. 1`] = `
       >
         internets
       </div>
-    </button>
+    </a>
   </div>
 </div>
 `;
