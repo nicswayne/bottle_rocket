@@ -2,6 +2,51 @@
 
 exports[`Web component should match snapshot. 1`] = `
 <div>
-  Web
+  <div
+    class="web-body"
+  >
+    <iframe
+      src="https://www.bottlerocketstudios.com/contact"
+      title="contact"
+    >
+      
+    </iframe>
+  </div>
+  <div
+    class="footer"
+  >
+    <a
+      class="button"
+      href="/"
+    >
+      <img
+        alt=""
+        src="tab_lunch@2x.png"
+      >
+        
+      </img>
+      <div
+        class="text"
+      >
+        lunch
+      </div>
+    </a>
+    <a
+      class="button"
+      href="/web"
+    >
+      <img
+        alt=""
+        src="tab_internets@2x.png"
+      >
+        
+      </img>
+      <div
+        class="text"
+      >
+        internets
+      </div>
+    </a>
+  </div>
 </div>
 `;

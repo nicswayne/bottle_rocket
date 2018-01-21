@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should match snapshot. 1`] = `
+<div
+  class="footer"
+>
+  <a
+    class="button"
+    href="/"
+  >
+    <img
+      alt=""
+      src="tab_lunch@2x.png"
+    >
+      
+    </img>
+    <div
+      class="text"
+    >
+      lunch
+    </div>
+  </a>
+  <a
+    class="button"
+    href="/web"
+  >
+    <img
+      alt=""
+      src="tab_internets@2x.png"
+    >
+      
+    </img>
+    <div
+      class="text"
+    >
+      internets
+    </div>
+  </a>
+</div>
+`;
