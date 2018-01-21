@@ -4,8 +4,14 @@ import { getList } from '../../actions/restaurants';
 
 import List from '../../components/List';
 
+const mapStateToProps = ({ data, hasError, isLoading }) => ({
+    data,
+    hasError,
+    isLoading,
+});
+
 const mapDispatchToProps = dispatch => ({
     getList: () => dispatch(getList()),
 });
 
-export default connect(null, mapDispatchToProps)(List);
+export default connect(mapStateToProps, mapDispatchToProps)(List);
