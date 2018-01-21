@@ -1,14 +1,12 @@
 import React from 'react';
 import { compose, lifecycle, withHandlers, withState } from 'recompose';
-import { Link } from 'react-router-dom';
 import { GoogleApiWrapper } from 'google-maps-react';
 
 import DetailsModal from './detailsModal';
+import Footer from '../shared/Footer';
 
 import back from '../../resources/icons/ic_webBack@2x.png';
 import gradient from '../../resources/backgrounds/cellGradientBackground@2x.png';
-import internets from '../../resources/icons/tab_internets@2x.png';
-import lunch from '../../resources/icons/tab_lunch@2x.png';
 import map from '../../resources/icons/icon_map@2x.png';
 
 const List = ({ data, google, detailIndex, changeIndex, clearIndex }) => (
@@ -54,16 +52,7 @@ const List = ({ data, google, detailIndex, changeIndex, clearIndex }) => (
                     </div>
                 ))}
         </div>
-        <div className="footer">
-            <Link className="button" to="/">
-                <img src={lunch} alt="" />
-                <div className="text">lunch</div>
-            </Link>
-            <Link className="button" to="/web">
-                <img src={internets} alt="" />
-                <div className="text">internets</div>
-            </Link>
-        </div>
+        <Footer />
     </div>
 );
 

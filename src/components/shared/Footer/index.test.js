@@ -2,16 +2,16 @@ import React from 'react';
 import { shallow, render } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 
-import Web from '.';
+import Footer from '.';
 
-it('Web component should render without crashing.', () => {
-    shallow(<Web />);
+it('Footer component should render without crashing.', () => {
+    shallow(<Footer />);
 });
 
-it('Web component should match snapshot.', () => {
+it('Footer component should match snapshot.', () => {
     const wrapper = render(
         <MemoryRouter>
-            <Web />
+            <Footer />
         </MemoryRouter>
     );
 
