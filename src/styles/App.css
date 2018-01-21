@@ -5,7 +5,7 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
-@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600");
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -352,6 +352,8 @@ button {
 .item,
 .item img {
   height: 180px;
+  float: left;
+  width: 50%;
 }
 
 .item:hover,
@@ -359,16 +361,17 @@ button {
   cursor: pointer;
 }
 
-.item .background-img {
+.item .background-img,
+.item .top-img {
   position: absolute;
+}
+
+.item .background-img {
   z-index: 0;
-  width: 100%;
 }
 
 .item .top-img {
-  position: absolute;
   z-index: 1;
-  width: 100%;
 }
 
 .item .name {
@@ -389,6 +392,16 @@ button {
 .category {
   padding-top: 6px;
   font-size: 12px;
+}
+
+@media only screen and (max-width: 480px) {
+  .item {
+    float: none;
+  }
+  .item .background-img,
+  .item .top-img {
+    width: 100%;
+  }
 }
 
 /************* DETAILS ************/
@@ -451,4 +464,10 @@ button {
 .button div {
   /*padding-top: 2px*/
   padding: 2px 0px 2px 0px;
+}
+
+@media only screen and (min-width: 480px) {
+  .footer {
+    display: none;
+  }
 }
