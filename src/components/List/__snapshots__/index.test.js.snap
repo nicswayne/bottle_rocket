@@ -1,16 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List component should match snapshot. 1`] = `
-<div
-  class=""
->
+<div>
   <div>
     Header
   </div>
-  <div>
-    Body
-    <div>
-      Item
+  <div
+    class="list-body"
+  >
+    <div
+      class="item"
+    >
+      <img
+        alt=""
+        class="background-img"
+        src="http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png"
+      >
+        
+      </img>
+      <img
+        alt=""
+        class="top-img"
+        src="cellGradientBackground@2x.png"
+      >
+        
+      </img>
+      <div>
+        <div
+          class="name"
+        >
+          <strong>
+            Restaurant Name
+          </strong>
+          <div
+            class="category"
+          >
+            Category Type
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div

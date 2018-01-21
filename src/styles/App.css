@@ -319,18 +319,61 @@ button {
 
 /************* HEADER *************/
 /************* LIST *************/
+
+.list-body {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.item {
+  overflow: scroll;
+}
+
+.item,
+.item img {
+  height: 180px;
+}
+
+.item .background-img {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}
+
+.item .top-img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.name {
+  position: relative;
+  padding-top: 135px;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 12px;
+  z-index: 2;
+}
+
+.category {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  font-size: 12px;
+}
+
 /************* FOOTER *************/
 
 .footer {
   height: 50px;
   background-color: #2a2a2a;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  z-index: 99999;
 }
 
 .footer,
