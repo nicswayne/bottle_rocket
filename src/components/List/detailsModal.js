@@ -24,13 +24,17 @@ const detailsModal = ({ google, details }) => {
             />
             <div className="details-header">
                 <div className="name text">
-                    <strong>{name}</strong>
+                    {name}
                     <div className="category">{category}</div>
                 </div>
             </div>
-            <div>
-                <div className="name pad-16">{`${address}\n${city}, ${state} ${postalCode}`}</div>
-                <div className="name pad-26">{formattedPhone}</div>
+            <div className="details">
+                <div className="name address pad-16">
+                    {`${address}`}
+                    <br />
+                    {`${city}, ${state} ${postalCode}`}
+                </div>
+                <div className="name address pad-26">{formattedPhone}</div>
                 <div className="name pad-26">@{twitter}</div>
             </div>
         </div>

@@ -314,8 +314,28 @@ button {
   line-height: 1;
 }
 
+/************ TEXT *************/
+
 .text {
   color: #fff;
+}
+
+.header .text,
+.item .name,
+.details-header .name {
+  font-family: "Nunito";
+  font-weight: 600;
+}
+
+.item .category,
+.details-header .category,
+.details {
+  font-family: "Nunito";
+  font-weight: 400;
+}
+
+.details .address {
+  font-size: 16px;
 }
 
 /************* HEADER *************/
@@ -343,10 +363,6 @@ button {
 .list-body {
   position: relative;
   margin-bottom: 50px;
-}
-
-.item {
-  overflow: scroll;
 }
 
 .item,
@@ -378,6 +394,7 @@ button {
   position: relative;
   padding-top: 135px;
   z-index: 2;
+  width: 270px;
 }
 
 .item .category {
@@ -394,13 +411,42 @@ button {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 520px) {
   .item {
     float: none;
   }
   .item .background-img,
   .item .top-img {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .item {
+    float: left;
+  }
+  .item,
+  .item img,
+  .item .background-img,
+  .item .top-img {
+    height: 300px;
+    width: 50%;
+  }
+  .item .name {
+    padding-top: 250px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .item,
+  .item img,
+  .item .background-img,
+  .item .top-img {
+    height: 450px;
+    width: 50%;
+  }
+  .item .name {
+    padding-top: 400px;
   }
 }
 
@@ -434,10 +480,19 @@ button {
 
 /************* WEB **************/
 
+.nav,
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  width: 200px;
+}
+
 .web-body {
   position: absolute;
+  top: 70px;
   bottom: 50px;
-  top: 0;
   left: 0;
   right: 0;
 }
@@ -456,9 +511,7 @@ button {
   bottom: 0;
   right: 0;
   left: 0;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   z-index: 99999;
 }
 
@@ -477,7 +530,6 @@ button {
   height: 26px;
 }
 .button div {
-  /*padding-top: 2px*/
   padding: 2px 0px 2px 0px;
 }
 
