@@ -411,45 +411,6 @@ button {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 520px) {
-  .item {
-    float: none;
-  }
-  .item .background-img,
-  .item .top-img {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 720px) {
-  .item {
-    float: left;
-  }
-  .item,
-  .item img,
-  .item .background-img,
-  .item .top-img {
-    height: 300px;
-    width: 50%;
-  }
-  .item .name {
-    padding-top: 250px;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  .item,
-  .item img,
-  .item .background-img,
-  .item .top-img {
-    height: 450px;
-    width: 50%;
-  }
-  .item .name {
-    padding-top: 400px;
-  }
-}
-
 /************* DETAILS ************/
 
 .header .button {
@@ -533,8 +494,49 @@ button {
   padding: 2px 0px 2px 0px;
 }
 
-@media only screen and (min-width: 480px) {
+/********** RESPONSIVE *************/
+
+@media only screen and (min-width: 520px) {
   .footer {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .item {
+    float: none;
+  }
+  .item .background-img,
+  .item .top-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .item {
+    float: left;
+  }
+  .item,
+  .item img,
+  .item .background-img,
+  .item .top-img {
+    height: 300px;
+    width: 50%;
+  }
+  .item .name {
+    padding-top: 250px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .item,
+  .item img,
+  .item .background-img,
+  .item .top-img {
+    height: 450px;
+    width: 50%;
+  }
+  .item .name {
+    padding-top: 400px;
   }
 }
