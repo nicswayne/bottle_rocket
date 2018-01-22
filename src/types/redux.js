@@ -1,3 +1,5 @@
+/* eslint no-undef:0 */
+
 declare type Action = {|
     type: string,
     error?: string,
