@@ -28,7 +28,6 @@ const List = ({ data, google, detailIndex, changeIndex, clearIndex }) => (
             )}
             {detailIndex === null &&
                 data &&
-                data.length &&
                 data.map((restaurant, i) => (
                     <div
                         key={i}
@@ -69,7 +68,7 @@ const enhance = compose(
         },
     }),
     GoogleApiWrapper({
-        apiKey: process.env.GOOGLE_API_KEY || '',
+        apiKey: process.env.REACT_APP_GOOGLE_API_KEY || '',
         version: '3',
     })
 );

@@ -3,6 +3,45 @@
 exports[`Web component should match snapshot. 1`] = `
 <div>
   <div
+    class="header"
+  >
+    <div
+      class="nav"
+    >
+      <a
+        class="button"
+        href="/"
+      >
+        <img
+          alt=""
+          src="ic_webBack@2x.png"
+        >
+          
+        </img>
+      </a>
+      <div
+        class="button"
+      >
+        <img
+          alt=""
+          src="ic_webRefresh@2x.png"
+        >
+          
+        </img>
+      </div>
+      <div
+        class="button"
+      >
+        <img
+          alt=""
+          src="ic_webForward@2x.png"
+        >
+          
+        </img>
+      </div>
+    </div>
+  </div>
+  <div
     class="web-body"
   >
     <iframe
