@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { compose, lifecycle, withHandlers, withState } from 'recompose';
 import { GoogleApiWrapper } from 'google-maps-react';
@@ -9,7 +11,19 @@ import back from '../../resources/icons/ic_webBack@2x.png';
 import gradient from '../../resources/backgrounds/cellGradientBackground@2x.png';
 import map from '../../resources/icons/icon_map@2x.png';
 
-const List = ({ data, google, detailIndex, changeIndex, clearIndex }) => (
+const List = ({
+    data,
+    google,
+    detailIndex,
+    changeIndex,
+    clearIndex,
+}: {
+    data: Array<Details>,
+    google: Object,
+    detailIndex: number,
+    changeIndex: number => void,
+    clearIndex: () => void,
+}) => (
     <div>
         <div className="header">
             <div className="text">

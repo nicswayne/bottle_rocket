@@ -1,8 +1,10 @@
+// @flow
+
 import { combineReducers } from 'redux';
 
 import Constants from '../constants';
 
-function data(state = [], action) {
+function data(state: Array<Details> = [], action: Action): Array<Details> {
     switch (action.type) {
         case `${Constants.GET_ALL_RESTAURANTS}/SUCCESS`:
             if (!action.payload) return state;
@@ -15,7 +17,7 @@ function data(state = [], action) {
     }
 }
 
-function error(state = '', action) {
+function error(state: string = '', action: Action): string {
     switch (action.type) {
         case `${Constants.GET_ALL_RESTAURANTS}/ERROR`:
             if (!action.error) return 'Unknown error.';
@@ -26,7 +28,7 @@ function error(state = '', action) {
     }
 }
 
-function isLoading(state = false, action) {
+function isLoading(state: boolean = false, action: Action): boolean {
     switch (action.type) {
         case `${Constants.GET_ALL_RESTAURANTS}/START`:
             return true;

@@ -1,7 +1,32 @@
+// @flow
+
 import React from 'react';
 import MapComponent from './map';
 
-const detailsModal = ({ google, details }) => {
+type Details = {
+    name: string,
+    category: string,
+    contact: {
+        formattedPhone: string,
+        twitter: string,
+    },
+    location: {
+        address: string,
+        city: string,
+        lat: number,
+        lng: number,
+        postalCode: string,
+        state: string,
+    },
+};
+
+const detailsModal = ({
+    google,
+    details,
+}: {
+    google: Object,
+    details: Details,
+}) => {
     const { address, city, lat, lng, postalCode, state } = details.location;
     const { formattedPhone, twitter } = details.contact;
     const { category, name } = details;
