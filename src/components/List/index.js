@@ -8,27 +8,39 @@ import DetailsModal from './detailsModal';
 import Footer from '../shared/Footer';
 
 import back from '../../resources/icons/ic_webBack@2x.png';
-import gradient from '../../resources/backgrounds/cellGradientBackground@2x.png';
 import map from '../../resources/icons/icon_map@2x.png';
 
+const toggleOpen = () => {
+    const slide = document.getElementById('slide');
+    return slide ? slide.classList.toggle('opened') : null;
+};
+
 const List = ({
-    data,
-    google,
-    detailIndex,
     changeIndex,
-    clearIndex,
+    data,
+    detailIndex,
+    google,
+    show,
+    toggleShow,
 }: {
-    data: Array<Details>,
-    google: Object,
-    detailIndex: number,
     changeIndex: number => void,
-    clearIndex: () => void,
+    data: Array<Details>,
+    detailIndex: number,
+    google: Object,
+    show: boolean,
+    toggleShow: () => void,
 }) => (
     <div>
         <div className="header">
             <div className="text">
-                {detailIndex !== null && (
-                    <button className="button" onClick={clearIndex}>
+                {show && (
+                    <button
+                        className="button"
+                        onClick={() => {
+                            toggleShow();
+                            toggleOpen();
+                        }}
+                    >
                         <img className="back" src={back} alt="" />
                     </button>
                 )}
@@ -37,33 +49,39 @@ const List = ({
             </div>
         </div>
         <div className="list-body">
-            {detailIndex !== null && (
-                <DetailsModal google={google} details={data[detailIndex]} />
-            )}
-            {detailIndex === null &&
-                data &&
-                data.map((restaurant, i) => (
-                    <div
-                        key={i}
-                        className="item"
-                        onClick={() => changeIndex(i)}
-                    >
-                        <img
-                            className="background-img"
-                            src={restaurant.backgroundImageURL}
-                            alt=""
-                        />
-                        <img className="top-img" src={gradient} alt="" />
-                        <div>
-                            <div className="name text">
-                                <strong>{restaurant.name}</strong>
-                                <div className="category">
-                                    {restaurant.category}
+            <div id="slide" className="modal">
+                {detailIndex !== null && (
+                    <DetailsModal google={google} details={data[detailIndex]} />
+                )}
+            </div>
+            <div className="list">
+                {data &&
+                    data.map((restaurant, i) => (
+                        <div
+                            key={i}
+                            className="item"
+                            style={{
+                                backgroundImage: `url(${
+                                    restaurant.backgroundImageURL
+                                })`,
+                            }}
+                            onClick={() => {
+                                toggleShow();
+                                changeIndex(i);
+                                toggleOpen();
+                            }}
+                        >
+                            <div>
+                                <div className="name text">
+                                    <strong>{restaurant.name}</strong>
+                                    <div className="category">
+                                        {restaurant.category}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+            </div>
         </div>
         <Footer />
     </div>
@@ -71,9 +89,10 @@ const List = ({
 
 const enhance = compose(
     withState('detailIndex', 'updateIndex', null),
+    withState('show', 'updateShow', false),
     withHandlers({
         changeIndex: ({ updateIndex }) => index => updateIndex(index),
-        clearIndex: ({ updateIndex }) => () => updateIndex(null),
+        toggleShow: ({ updateShow, show }) => () => updateShow(!show),
     }),
     lifecycle({
         componentDidMount() {
