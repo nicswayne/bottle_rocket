@@ -1,20 +1,31 @@
 // @flow
 
 import React from 'react';
-import { Map, Marker } from 'google-maps-react';
+import { InfoWindow, Map, Marker } from 'google-maps-react';
+import { compose, withHandlers, withState } from 'recompose';
 
 const MapComponent = ({
+    activeMarker,
+    containerStyle,
     google,
     location,
-    containerStyle,
-    zoom,
     name,
+    showingInfo,
+    updateMarkerInfo,
+    zoom,
 }: {
+    activeMarker: Object,
+    containerStyle: {
+        height: string,
+        width: string,
+        position: string,
+    },
     google: Object,
     location: { lat: number, lng: number },
-    containerStyle: Object,
-    zoom: number,
     name: string,
+    showingInfo: boolean,
+    updateMarkerInfo: () => void,
+    zoom: number,
 }) => (
     <div className="loc-map">
         <div className="map-content">
@@ -25,10 +36,32 @@ const MapComponent = ({
                 initialCenter={location}
                 containerStyle={containerStyle}
             >
-                <Marker title={name} name={name} position={location} />
+                <InfoWindow marker={activeMarker} visible={showingInfo}>
+                    <div className="name">{name}</div>
+                </InfoWindow>
+                <Marker
+                    onMouseover={updateMarkerInfo}
+                    onMouseout={updateMarkerInfo}
+                    name={name}
+                    position={location}
+                />
             </Map>
         </div>
     </div>
 );
 
-export default MapComponent;
+const enhance = compose(
+    withState('showingInfo', 'updateShow', false),
+    withState('activeMarker', 'updateMapInfo', {}),
+    withHandlers({
+        updateMarkerInfo: ({ updateShow, showingInfo, updateMapInfo }) => (
+            props,
+            marker
+        ) => {
+            updateMapInfo(marker);
+            return updateShow(!showingInfo);
+        },
+    })
+);
+
+export default enhance(MapComponent);
