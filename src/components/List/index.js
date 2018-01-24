@@ -74,7 +74,7 @@ const List = ({
                         >
                             <div>
                                 <div className="name text">
-                                    <strong>{restaurant.name}</strong>
+                                    {restaurant.name}
                                     <div className="category">
                                         {restaurant.category}
                                     </div>
