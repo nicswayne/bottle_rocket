@@ -2,6 +2,7 @@
 
 import React from 'react';
 import MapComponent from './map';
+import { getOr } from 'lodash/fp';
 
 const detailsModal = ({
     google,
@@ -11,7 +12,12 @@ const detailsModal = ({
     details: Details,
 }) => {
     const { address, city, lat, lng, postalCode, state } = details.location;
-    const { formattedPhone, twitter } = details.contact;
+    const formattedPhone = getOr(
+        'No phone number provided.',
+        'contact.formattedPhone',
+        details
+    );
+    const twitter = getOr('', 'contact.twitter', details);
     const { category, name } = details;
 
     return (
@@ -38,7 +44,9 @@ const detailsModal = ({
             <div>
                 <div className="name pad-16">{`${address}\n${city}, ${state} ${postalCode}`}</div>
                 <div className="name pad-26">{formattedPhone}</div>
-                <div className="name pad-26">@{twitter}</div>
+                <div className="name pad-26">
+                    {twitter ? `@${twitter}` : 'No twitter handle provided.'}
+                </div>
             </div>
         </div>
     );
