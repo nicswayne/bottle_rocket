@@ -426,11 +426,11 @@ iframe {
 }
 
 .button img {
-  padding-top: 5px;
+  padding-top: 6px;
   height: 26px;
 }
 .button div {
-  padding: 2px 0px 2px 0px;
+  padding-top: 2px;
 }
 
 /********** RESPONSIVE *************/
