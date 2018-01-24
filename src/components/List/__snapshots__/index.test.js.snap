@@ -24,7 +24,17 @@ exports[`List component should match snapshot. 1`] = `
     <div
       class="list-body"
     >
-      
+      <div
+        class="modal"
+        id="slide"
+      >
+        
+      </div>
+      <div
+        class="list"
+      >
+        
+      </div>
     </div>
     <div
       class="footer"

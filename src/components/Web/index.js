@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import Footer from '../shared/Footer';
 
 import back from '../../resources/icons/ic_webBack@2x.png';
-import forward from '../../resources/icons/ic_webForward@2x.png';
 import refresh from '../../resources/icons/ic_webRefresh@2x.png';
 
 const Web = () => (
@@ -21,9 +20,6 @@ const Web = () => (
                     onClick={() => window.location.reload(true)}
                 >
                     <img src={refresh} alt="" />
-                </div>
-                <div className="button">
-                    <img src={forward} alt="" />
                 </div>
             </div>
         </div>

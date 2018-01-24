@@ -29,16 +29,6 @@ exports[`Web component should match snapshot. 1`] = `
           
         </img>
       </div>
-      <div
-        class="button"
-      >
-        <img
-          alt=""
-          src="ic_webForward@2x.png"
-        >
-          
-        </img>
-      </div>
     </div>
   </div>
   <div
