@@ -1,10 +1,10 @@
 // @flow
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Footer from '../shared/Footer';
 
+import forward from '../../resources/icons/ic_webForward@2x.png';
 import back from '../../resources/icons/ic_webBack@2x.png';
 import refresh from '../../resources/icons/ic_webRefresh@2x.png';
 
@@ -12,14 +12,25 @@ const Web = () => (
     <div>
         <div className="header">
             <div className="nav">
-                <Link className="button" to="/">
-                    <img src={back} alt="" />
-                </Link>
-                <div
-                    className="button"
-                    onClick={() => window.location.reload(true)}
-                >
-                    <img src={refresh} alt="" />
+                <div className="button-group">
+                    <button
+                        className="button"
+                        onClick={() => window.history.back()}
+                    >
+                        <img src={back} alt="" />
+                    </button>
+                    <button
+                        className="button"
+                        onClick={() => window.location.reload(true)}
+                    >
+                        <img src={refresh} alt="" />
+                    </button>
+                    <button
+                        className="button"
+                        onClick={() => window.history.forward()}
+                    >
+                        <img src={forward} alt="" />
+                    </button>
                 </div>
             </div>
         </div>
