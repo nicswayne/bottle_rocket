@@ -207,7 +207,8 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-  /* 2 */
+  outline: none;
+  -webkit-outline: none;
 }
 
 img {

@@ -19,7 +19,6 @@ const List = ({
     changeIndex,
     data,
     detailIndex,
-    hasError,
     google,
     show,
     toggleShow,
