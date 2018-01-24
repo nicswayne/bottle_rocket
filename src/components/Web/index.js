@@ -38,6 +38,7 @@ const Web = () => (
             <iframe
                 src="https://www.bottlerocketstudios.com/contact"
                 title="contact"
+                sandbox="allow-scripts allow-top-navigation allow-forms allow-same-origin"
             />
         </div>
         <Footer />
