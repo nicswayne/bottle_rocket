@@ -8,26 +8,39 @@ exports[`Web component should match snapshot. 1`] = `
     <div
       class="nav"
     >
-      <a
-        class="button"
-        href="/"
-      >
-        <img
-          alt=""
-          src="ic_webBack@2x.png"
-        >
-          
-        </img>
-      </a>
       <div
-        class="button"
+        class="button-group"
       >
-        <img
-          alt=""
-          src="ic_webRefresh@2x.png"
+        <button
+          class="button"
         >
-          
-        </img>
+          <img
+            alt=""
+            src="ic_webBack@2x.png"
+          >
+            
+          </img>
+        </button>
+        <button
+          class="button"
+        >
+          <img
+            alt=""
+            src="ic_webRefresh@2x.png"
+          >
+            
+          </img>
+        </button>
+        <button
+          class="button"
+        >
+          <img
+            alt=""
+            src="ic_webForward@2x.png"
+          >
+            
+          </img>
+        </button>
       </div>
     </div>
   </div>

@@ -9,12 +9,13 @@ exports[`List component should match snapshot. 1`] = `
       <div
         class="text"
       >
-        <strong>
-          Lunch Tyme
-        </strong>
+        Lunch Tyme
+      </div>
+      <div
+        class="map"
+      >
         <img
           alt=""
-          class="map"
           src="icon_map@2x.png"
         >
           

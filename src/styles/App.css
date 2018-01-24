@@ -171,21 +171,6 @@ samp {
 }
 
 /**
-     * Add the correct font style in Android 4.3-.
-     */
-dfn {
-  font-style: italic;
-}
-
-/**
-     * Add the correct background and color in IE 9-.
-     */
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-/**
      * Add the correct font size in all browsers.
      */
 small {
@@ -212,44 +197,6 @@ sup {
   top: -0.5em;
 }
 
-/* Forms
-       ========================================================================== */
-/**
-     * 1. Change the font styles in all browsers (opinionated).
-     * 2. Remove the margin in Firefox and Safari.
-     */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: sans-serif;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-}
-
-/**
-     * Show the overflow in IE.
-     */
-button {
-  overflow: visible;
-}
-
-/**
-     * Remove the inheritance of text transform in Edge, Firefox, and IE.
-     * 1. Remove the inheritance of text transform in Firefox.
-     */
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
 /**
      * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
      *    controls in Android 4.
@@ -261,38 +208,6 @@ html [type="button"],
 [type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  /**
-       * Remove the inner border and padding in Firefox.
-       */
-  /**
-       * Restore the focus styles unset by the previous rule.
-       */
-}
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
-     * Show the overflow in Edge.
-     */
-input {
-  overflow: visible;
 }
 
 img {
@@ -341,28 +256,52 @@ button {
 /************* HEADER *************/
 
 .header {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   background-color: #43e895;
   text-align: center;
   height: 70px;
-  position: fixed;
   width: 100%;
 }
 
 .header .text {
   font-size: 17px;
   line-height: 90px;
+  min-width: 70%;
+  padding-right: 5%;
 }
 
 .header .map {
-  height: 35px;
+  min-width: 10%;
   padding-right: 12px;
   padding-top: 26px;
-  float: right;
+}
+
+.header .map img {
+  height: 35px;
+}
+
+.header .button {
+  width: 20%;
+  padding-top: 17px;
+}
+
+.nav {
+  width: 100%;
+}
+
+.button-group {
+  width: 250px;
+  text-align: left;
 }
 
 /************* LIST *************/
 
 .list-body {
+  margin-top: 70px;
   margin-bottom: 50px;
   display: flex;
 }
@@ -426,14 +365,6 @@ button {
   flex-direction: column;
 }
 
-.header .button {
-  height: 70px;
-  width: 70px;
-  padding-left: 12px;
-  padding-top: 17px;
-  float: left;
-}
-
 .details-header {
   background-color: #34b379;
   height: 60px;
@@ -454,13 +385,9 @@ button {
 
 /************* WEB **************/
 
-.nav,
 .footer {
   display: flex;
   justify-content: space-between;
-}
-.nav {
-  width: 100px;
 }
 
 .web-body {

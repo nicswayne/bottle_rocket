@@ -19,6 +19,7 @@ const List = ({
     changeIndex,
     data,
     detailIndex,
+    hasError,
     google,
     show,
     toggleShow,
@@ -32,20 +33,20 @@ const List = ({
 }) => (
     <div>
         <div className="header">
-            <div className="text">
-                {show && (
-                    <button
-                        className="button"
-                        onClick={() => {
-                            toggleShow();
-                            toggleOpen();
-                        }}
-                    >
-                        <img className="back" src={back} alt="" />
-                    </button>
-                )}
-                <strong>Lunch Tyme</strong>
-                <img className="map" src={map} alt="" />
+            {show && (
+                <button
+                    className="button"
+                    onClick={() => {
+                        toggleShow();
+                        toggleOpen();
+                    }}
+                >
+                    <img className="back" src={back} alt="" />
+                </button>
+            )}
+            <div className="text">Lunch Tyme</div>
+            <div className="map">
+                <img src={map} alt="" />
             </div>
         </div>
         <div className="list-body">
@@ -56,6 +57,7 @@ const List = ({
             </div>
             <div className="list">
                 {data &&
+                    data.length !== 0 &&
                     data.map((restaurant, i) => (
                         <div
                             key={i}
