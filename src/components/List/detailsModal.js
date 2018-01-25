@@ -20,7 +20,7 @@ const detailsModal = ({
         <div>
             <MapComponent
                 google={google}
-                zoom={14}
+                zoom={16}
                 containerStyle={{
                     height: '180px',
                     position: 'relative',
