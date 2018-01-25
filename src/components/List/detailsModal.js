@@ -12,11 +12,7 @@ const detailsModal = ({
     details: Details,
 }) => {
     const { address, city, lat, lng, postalCode, state } = details.location;
-    const formattedPhone = getOr(
-        'No phone number provided.',
-        'contact.formattedPhone',
-        details
-    );
+    const formattedPhone = getOr('', 'contact.formattedPhone', details);
     const twitter = getOr('', 'contact.twitter', details);
     const { category, name } = details;
 
@@ -45,7 +41,7 @@ const detailsModal = ({
                 <div className="name pad-16">{`${address}\n${city}, ${state} ${postalCode}`}</div>
                 <div className="name pad-26">{formattedPhone}</div>
                 <div className="name pad-26">
-                    {twitter ? `@${twitter}` : 'No twitter handle provided.'}
+                    {twitter ? `@${twitter}` : ''}
                 </div>
             </div>
         </div>
