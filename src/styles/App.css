@@ -272,8 +272,8 @@ button {
 .header .text {
   font-size: 17px;
   line-height: 90px;
-  min-width: 70%;
-  padding-right: 5%;
+  min-width: 50%;
+  text-align: left;
 }
 
 .header .map {
@@ -287,8 +287,11 @@ button {
 }
 
 .header .button {
-  width: 20%;
-  padding-top: 17px;
+  position: absolute;
+  left: 0px;
+  width: 50px;
+  height: 100%;
+  padding-top: 15px;
 }
 
 .nav {
