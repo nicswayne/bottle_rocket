@@ -3,8 +3,15 @@
 import React from 'react';
 
 const ErrorComponent = ({ error }: { error: string }) => (
-    <div>
-        <h5>{error}</h5>
+    <div className="error">
+        <h3>{error}</h3>
+        Please try again.
+        <button
+            className="reload text"
+            onClick={() => window.location.reload(true)}
+        >
+            reload
+        </button>
     </div>
 );
 

@@ -21,6 +21,7 @@ const List = ({
     data,
     detailIndex,
     google,
+    hasError,
     isLoading,
     show,
     toggleShow,
@@ -29,6 +30,7 @@ const List = ({
     data: Array<Details>,
     detailIndex: number,
     google: Object,
+    hasError: string,
     isLoading: boolean,
     show: boolean,
     toggleShow: () => void,
@@ -57,7 +59,7 @@ const List = ({
                     <DetailsModal google={google} details={data[detailIndex]} />
                 )}
             </div>
-            <AsyncWrapper isLoading={isLoading} error="">
+            <AsyncWrapper isLoading={isLoading} error={hasError}>
                 <div className="list">
                     {data &&
                         data.length !== 0 &&
