@@ -32,8 +32,8 @@ const MapComponent = ({
             <Map
                 google={google}
                 zoom={zoom}
-                clickableIcons={false}
                 initialCenter={location}
+                center={location}
                 containerStyle={containerStyle}
             >
                 <InfoWindow marker={activeMarker} visible={showingInfo}>
