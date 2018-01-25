@@ -481,7 +481,7 @@ iframe {
 @media only screen and (min-width: 720px) {
   .item,
   .item img {
-    height: 350px;
+    height: 300px;
   }
   .item .name {
     padding: 0 0 6px 12px;
