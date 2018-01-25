@@ -307,6 +307,15 @@ button {
   min-width: 15px;
 }
 
+/************* SHARED *************/
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 100%;
+}
+
 /************* LIST *************/
 
 .list-body {
