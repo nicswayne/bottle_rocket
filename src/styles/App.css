@@ -276,7 +276,7 @@ button {
 }
 
 .header .map {
-  min-width: 10%;
+  min-width: 35px;
   padding-right: 12px;
   padding-top: 26px;
 }
@@ -297,6 +297,14 @@ button {
 .button-group {
   width: 250px;
   text-align: left;
+}
+
+.button .back {
+  display: flex;
+  position: relative;
+  left: 12px;
+  padding-top: 0;
+  min-width: 15px;
 }
 
 /************* LIST *************/
