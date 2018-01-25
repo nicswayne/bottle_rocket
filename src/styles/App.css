@@ -245,7 +245,8 @@ button {
 
 .item .category,
 .details-header .category,
-.details {
+.details,
+.reload {
   font-family: "Nunito";
   font-weight: 400;
 }
@@ -307,6 +308,24 @@ button {
   min-width: 15px;
 }
 
+/************* SHARED *************/
+
+.loading,
+.error {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 100%;
+}
+
+.reload {
+  margin: 12px auto;
+  height: 35px;
+  width: 45px;
+  background-color: #34b379;
+  border-radius: 7px;
+}
+
 /************* LIST *************/
 
 .list-body {
@@ -329,7 +348,8 @@ button {
 }
 
 .item:hover,
-.button:hover {
+.button:hover,
+.reload:hover {
   cursor: pointer;
 }
 

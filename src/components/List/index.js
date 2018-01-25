@@ -4,6 +4,7 @@ import React from 'react';
 import { compose, lifecycle, withHandlers, withState } from 'recompose';
 import { GoogleApiWrapper } from 'google-maps-react';
 
+import AsyncWrapper from '../wrappers/asyncWrapper';
 import DetailsModal from './detailsModal';
 import Footer from '../shared/Footer';
 
@@ -20,6 +21,8 @@ const List = ({
     data,
     detailIndex,
     google,
+    hasError,
+    isLoading,
     show,
     toggleShow,
 }: {
@@ -27,6 +30,8 @@ const List = ({
     data: Array<Details>,
     detailIndex: number,
     google: Object,
+    hasError: string,
+    isLoading: boolean,
     show: boolean,
     toggleShow: () => void,
 }) => (
@@ -54,35 +59,37 @@ const List = ({
                     <DetailsModal google={google} details={data[detailIndex]} />
                 )}
             </div>
-            <div className="list">
-                {data &&
-                    data.length !== 0 &&
-                    data.map((restaurant, i) => (
-                        <div
-                            key={i}
-                            className="item"
-                            style={{
-                                backgroundImage: `url(${
-                                    restaurant.backgroundImageURL
-                                })`,
-                            }}
-                            onClick={() => {
-                                toggleShow();
-                                changeIndex(i);
-                                toggleOpen();
-                            }}
-                        >
-                            <div>
-                                <div className="name text">
-                                    {restaurant.name}
-                                    <div className="category">
-                                        {restaurant.category}
+            <AsyncWrapper isLoading={isLoading} error={hasError}>
+                <div className="list">
+                    {data &&
+                        data.length !== 0 &&
+                        data.map((restaurant, i) => (
+                            <div
+                                key={i}
+                                className="item"
+                                style={{
+                                    backgroundImage: `url(${
+                                        restaurant.backgroundImageURL
+                                    })`,
+                                }}
+                                onClick={() => {
+                                    toggleShow();
+                                    changeIndex(i);
+                                    toggleOpen();
+                                }}
+                            >
+                                <div>
+                                    <div className="name text">
+                                        {restaurant.name}
+                                        <div className="category">
+                                            {restaurant.category}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-            </div>
+                        ))}
+                </div>
+            </AsyncWrapper>
         </div>
         <Footer />
     </div>
